@@ -1,0 +1,31 @@
+package com.java8.features;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.BinaryOperator;
+
+public class ReduceStream8 {
+
+	/*
+	 * Many times, we need to perform operations where a stream reduces to single resultant value 
+	 * Ex: Minimum, maximum, sum, product etc. Reducing is repeating process of combining all elements 
+	 * reduce operator applies a binary operator to each element in the stream where the first argument 
+	 * to the operator is the return value of the previous application and secong argument is the 
+	 * current stream element. 
+	 * Syntax: R apply(T t,U u)
+	 */
+	
+	public static void main(String[] args) {
+		List<String> list=Arrays.asList("Sandy","Mammu","Advaith","Xyz","AdvaithRam");
+		BinaryOperator<String> biOpe=(s1,s2)->{
+			if(s1.length()>s2.length()) {
+				return s1;
+			}else {
+				return s2;
+			}
+		};
+		String data=list.stream().reduce(biOpe).get();
+		System.out.println("=="+biOpe.apply("Sandeep", "Mammu"));
+		System.out.println("=="+data);
+	}
+}

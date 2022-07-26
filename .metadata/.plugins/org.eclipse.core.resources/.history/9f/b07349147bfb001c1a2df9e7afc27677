@@ -1,0 +1,22 @@
+package com.java8.features;
+import com.java8.function.Test;
+
+public class LamdaExpression {
+	
+	public static void main(String[] args) {
+		
+		Test t=()->System.out.println("Welcome home");
+		t.m1();
+		
+		Addition ad=(a,b)->a+b;
+		int value=ad.add(5, 2);
+		System.out.println("sum of two numbers ::"+value);
+		
+		Subtraction sub = (c,d)->c-d;
+		int result=sub.subtract(5, 7);
+		
+		System.out.println("subtract of two numbers ::"+result);
+		
+	}
+
+}

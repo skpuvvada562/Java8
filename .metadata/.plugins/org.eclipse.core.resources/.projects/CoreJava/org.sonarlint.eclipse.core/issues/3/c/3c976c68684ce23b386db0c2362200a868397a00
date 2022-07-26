@@ -1,0 +1,14 @@
+
+j
+squid:S106"9Replace this use of System.out or System.err by a logger.(–äp8ôƒƒ”0HRMAJORZ
+CODE_SMELL
+p
+squid:S106"9Replace this use of System.out or System.err by a logger.(¬ªçùÿÿÿÿ8œÛ”0H
+RMAJORZ
+CODE_SMELL
+ƒsquid:S1192"HDefine a constant instead of duplicating this literal "Sandeep" 3 times.(¹¬Û‹ûÿÿÿÿ8Å…”0HRCRITICALZ
+CODE_SMELL
+dsquid:S1481",Remove this unused "empList" local variable.(“Èøøÿÿÿÿ8Å…”0HRMINORZ
+CODE_SMELL
+ssquid:S1854";Remove this useless assignment to local variable "empList".(“Èøøÿÿÿÿ8Å…”0HRMAJORZ
+CODE_SMELL

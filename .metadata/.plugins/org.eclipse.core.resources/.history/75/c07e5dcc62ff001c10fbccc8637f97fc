@@ -1,0 +1,11 @@
+package com.java8.features;
+
+public class Stream8java {
+
+	public static void main(String[] args) {
+		//Java 1.8 streams applicable for collection object
+		//A group of object as a single entity is called collection
+		//if you want to process the objects from collection then go for Stream concept
+		//I/O Stream meant for representing data with respect to file I/O operations
+	}
+}

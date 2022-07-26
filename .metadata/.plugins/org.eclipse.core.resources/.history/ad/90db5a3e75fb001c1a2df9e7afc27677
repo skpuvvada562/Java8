@@ -1,0 +1,13 @@
+package com.java8.features;
+import com.java8.function.*;
+
+public class LamdaExpression {
+	
+	public static void main(String[] args) {
+		
+		Test t=()->System.out.println("Welcome");
+		
+		System.out.println("===java 8 multiply===="+t.m1());
+	}
+
+}

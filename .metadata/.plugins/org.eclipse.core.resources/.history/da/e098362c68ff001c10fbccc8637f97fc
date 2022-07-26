@@ -1,0 +1,10 @@
+package com.java8.features;
+
+public class StreamFilter8 {
+
+	public static void main(String[] args) {
+		//if we want to filter elements from the collection based on some boolean condition then we should go for filter concept
+		//we can configure filter by filter() method of stream interface
+		
+	}
+}

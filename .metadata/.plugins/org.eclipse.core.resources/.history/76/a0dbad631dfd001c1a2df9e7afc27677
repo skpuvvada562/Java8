@@ -1,0 +1,10 @@
+package com.java8.features;
+
+public class Consumer8java {
+
+	public static void main(String[] args) {
+
+		//Consumer always take Input value and return void Ex: Consumer<T> --- void
+	}
+
+}

@@ -1,0 +1,90 @@
+package com.java8.features;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+
+import com.java8.pojo.Employee;
+
+public class Function8Java {
+
+	/*
+	 *  Using provided input perform some operation and return result (input -> perform operation -> output
+	 *  Ex: provide i value return square of it i-> i*i
+	 *  s->s.length here providing string value and returning length
+	 */
+	
+	
+	public int square(int i) {
+		return i*i;
+	}
+	public static void main(String[] args) {
+		
+		Function8Java fu=new Function8Java();
+		System.out.println(fu.square(5));
+		
+		Function<Integer,Integer> f=i->i*i;
+		System.out.println("functional interface:::"+f.apply(5));
+		
+		Function<List<Employee>,Employee> empFun=elist->{
+			for(Employee e:elist) {
+				Predicate<Employee> p1=e1->e1.getAge()>30;// Learn Predicate8Java to understand this
+				
+				if(p1.test(e))
+					return e;
+			}
+			return null;
+		};
+		System.out.println(empFun.apply(Arrays.asList(new Employee(1l,"sandeep",30),new Employee(1l,"Jagan",35))));
+		Consumer<Employee> con=e2->{ //learn Consumer8java to understand this
+			System.out.println("Consumer name=="+e2.getName()+"==age=="+e2.getAge());
+			System.out.println("calling function from consumer=="+empFun.apply(Arrays.asList(new Employee(1l,"advaith",2),new Employee(1l,"mamatha",35))));
+		};
+		con.accept(new Employee(1l,"sandeep",30));
+		//Function Chaining means combining more than one function into one
+		// f1.andThen(f2).apply(i) means first f1 followed by f2
+		//f1.compose(f2).apply(i) means first f2 and then f1
+		//f1.andThen(f2).andThen(f3).apply(3) //same we can use for consumer
+		
+		//Example
+		
+		Function<Integer,Integer> f1=i->2*i;
+		Function<Integer,Integer> f2=i->i*i*i;
+		
+		
+		System.out.println("function chaining andThen concept=="+f1.andThen(f2).apply(2));
+		
+		
+		//f1=2*2 and then f2=4*4*4 = 64//output
+		System.out.println("function chaining compose=="+f1.compose(f2).apply(2));
+		//first it applies f2=2*2*2 and f1=2*8 = 16 //output
+		
+		//BiFunction
+		//BiFunction takes 2 input arguments and return abject
+		List<Employee> empList=Arrays.asList(
+				new Employee(2l,"Mamatha",30),
+				new Employee(1l,"Sandeep",34),
+				new Employee(3l,"Advaith",3),new Employee(4l,"Jitesh",10));
+		
+		Predicate<Employee> empPre=e->e.getAge()<30;
+		
+		BiFunction<List<Employee>, Employee, Set<Employee>> biF=(eList,e1)->{
+			Set<Employee> empSet=new HashSet<>();
+			for(Employee e:eList) {
+				if(empPre.test(e) && (e1.getName().equals(e.getName()))) {
+					empSet.add(e);
+				}
+			}
+			return empSet;
+		};
+		
+		System.out.println("bifunction=="+biF.apply(empList, new Employee(3l,"Advaith",3)));
+		
+		System.out.println("bifunction=="+biF.apply(empList, new Employee(4l,"Jitesh",10)));
+	}
+}

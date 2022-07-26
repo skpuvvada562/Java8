@@ -1,0 +1,33 @@
+package com.java8.features;
+import java.util.function.Predicate;
+
+import com.java8.function.Addition;
+import com.java8.function.Subtraction;
+import com.java8.function.Test;
+import com.java8.pojo.Employee;
+
+public class LamdaExpression {
+	
+	public static void main(String[] args) {
+		
+		Test t=()->System.out.println("Welcome home");
+		t.m1();
+		
+		Addition ad=(a,b)->a+b;
+		int value=ad.add(5, 2);
+		System.out.println("sum of two numbers ::"+value);
+		
+		Subtraction sub = (c,d)->c-d;
+		int result=sub.subtract(5, 7);
+		
+		System.out.println("subtract of two numbers ::"+result);
+		Employee emp =new Employee("Sandeep","Technical Arcitect");
+		Predicate<Employee> pre=(Employee e) -> "Sandeep".equals(e.getName());
+		System.out.println(pre.test(emp));
+		
+		Predicate<Integer> isEven=i->i%2==0;
+		System.out.println("===="+isEven.test(4)+"======"+isEven.negate().test(5));
+		
+	}
+
+}

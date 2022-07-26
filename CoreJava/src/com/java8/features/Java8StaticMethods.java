@@ -1,0 +1,16 @@
+package com.java8.features;
+
+interface Test{
+	
+	//To define general utility methods inside interface with static like add(a,b) 
+	public static void m1() {
+		System.out.println("I am in static interface m1 method...");
+	}
+}
+public class Java8StaticMethods { //if interface has only static method your class either implements the interface or not doesnt matter
+
+	//By default static method of the interface are not by defaulted not available in the implemented class we should use Interface Name static methods
+	public static void main(String[] args) {
+		Test.m1(); //this is the only way we can access the Test interface m1 method. 
+	}
+}

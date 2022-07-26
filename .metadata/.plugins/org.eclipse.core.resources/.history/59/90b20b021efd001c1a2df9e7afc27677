@@ -1,0 +1,25 @@
+package com.java8.features;
+
+import java.util.function.Consumer;
+
+import com.java8.pojo.Employee;
+
+public class Consumer8java {
+
+	public static void main(String[] args) {
+
+		//Consumer always take Input value and return void Ex: Consumer<T> --- void
+		
+		Consumer<String> c=s->System.out.println(s);
+		c.accept("Sandeep");
+		
+		Consumer<Employee> empCon=e->{
+			if("Sandeep".equals(e.getName())) {
+				e.setAge(35);
+				System.out.println(e);
+			}
+		};
+		empCon.accept(new Employee(1l,"Sandeep",30));
+	}
+
+}

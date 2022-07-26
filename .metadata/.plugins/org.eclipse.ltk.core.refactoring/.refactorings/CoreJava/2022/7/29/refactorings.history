@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.java8.features.MinMaxMethod&apos; to &apos;MinMaxMethod8&apos;&#x0D;&#x0A;- Original project: &apos;CoreJava&apos;&#x0D;&#x0A;- Original element: &apos;com.java8.features.MinMaxMethod&apos;&#x0D;&#x0A;- Renamed element: &apos;com.java8.features.MinMaxMethod8&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MinMaxMethod&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.java8.features{MinMaxMethod.java[MinMaxMethod" matchStrategy="1" name="MinMaxMethod8" qualified="false" references="true" similarDeclarations="false" stamp="1657714343067" textual="false" version="1.0"/>
+</session>

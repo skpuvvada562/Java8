@@ -1,0 +1,27 @@
+package com.java8.features;
+
+import java.util.function.Predicate;
+
+import com.java8.pojo.Employee;
+
+
+public class Predicate8Java {
+	
+	public  boolean test(Integer i) {
+		if(i%2==0)
+			return true;
+		else 
+			return false;
+	}
+
+	// Predicate is for conditional checks
+	// public abstract boolean test(T t)
+	public static void main(String[] args) {
+		
+		Predicate<Integer> isEven=i->i%2==0;  // above test method we can replace with this Predicate functionality  
+		System.out.println("===="+isEven.test(4)+"======"+isEven.negate().test(4));
+		
+		Predicate<Employee> empPred=e->e.getAge()>10 || e.getName().equals("sandeep");
+		System.out.println("is sandeep age is more than 30::"+empPred.test(new Employee(1l,"sandeep",35)));
+	}
+}

@@ -1,0 +1,8 @@
+package com.java8.features;
+
+public class UnaryOperator8java {
+
+	public static void main(String[] args) {
+		
+	}
+}

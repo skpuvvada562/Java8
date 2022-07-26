@@ -1,0 +1,11 @@
+package com.java8.features;
+
+public class Function8Java {
+
+	//Using provided input perform some operation and return result
+	// Ex: provide i value return square of it i-> i*i
+	// s->s.length here providing string value and returning length
+	public static void main(String[] args) {
+		
+	}
+}

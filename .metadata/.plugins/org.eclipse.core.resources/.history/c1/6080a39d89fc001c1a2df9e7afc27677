@@ -1,0 +1,10 @@
+package com.java8.features;
+
+public class Predicate8Java {
+
+	// Predicate is for conditional checks
+	// public abstract boolean test(T t)
+	public static void main(String[] args) {
+		
+	}
+}

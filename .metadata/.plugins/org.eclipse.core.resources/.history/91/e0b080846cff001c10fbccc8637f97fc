@@ -1,0 +1,9 @@
+package com.java8.features;
+
+public class StreamMethods8java {
+
+	public static void main(String[] args) {
+		//1) Processing by collect() method
+		// This method collects element from the stream and adding to the specified collection
+	}
+}

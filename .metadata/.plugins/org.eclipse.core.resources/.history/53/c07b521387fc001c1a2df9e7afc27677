@@ -1,0 +1,9 @@
+package com.java8.features;
+
+public class Predicate8Java {
+
+	//Predicate is for conditional checks
+	public static void main(String[] args) {
+		
+	}
+}

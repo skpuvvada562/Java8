@@ -1,0 +1,48 @@
+package com.java8.features;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.function.BinaryOperator;
+
+public class ReduceStream8 {
+
+	/*
+	 * Many times, we need to perform operations where a stream reduces to single resultant value 
+	 * Ex: Minimum, maximum, sum, product etc. Reducing is repeating process of combining all elements 
+	 * reduce operator applies a binary operator to each element in the stream where the first argument 
+	 * to the operator is the return value of the previous application and secong argument is the 
+	 * current stream element. 
+	 * Syntax: R apply(T t,U u)
+	 */
+	
+	public static void main(String[] args) {
+		List<String> list=Arrays.asList("Sandy","Mammu","Advaith","Xyz","AdvaithRam");
+		BinaryOperator<String> longestLength=(s1,s2)->{
+			if(s1.length()>s2.length()) {
+				return s1;
+			}else {
+				return s2;
+			}
+		};
+		BinaryOperator<String> shortestLength=(s1,s2)->{
+			if(s2.length()>s1.length()) {
+				return s1;
+			}else {
+				return s2;
+			}
+		};
+		String longestData=list.stream().reduce(longestLength).get();
+		System.out.println("=Longest="+longestLength.apply("Sandeep", "Mammu"));
+		System.out.println("=Longest="+longestData);
+		
+		String shortestData=list.stream().reduce(shortestLength).get();
+		System.out.println("=shortestData="+shortestData);
+		
+		List<String> list1=Arrays.asList("Sandep", "Kumar" , "Puvvada");
+		Optional<String> opt=list1.stream().reduce((s1,s2)->s1 +" "+s2);
+		if(opt.isPresent())
+			System.out.println("combined data=="+opt.get());
+		
+	}
+}

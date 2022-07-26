@@ -1,0 +1,14 @@
+package com.java8.features;
+
+import java.util.function.Predicate;
+
+public class Predicate8Java {
+
+	// Predicate is for conditional checks
+	// public abstract boolean test(T t)
+	public static void main(String[] args) {
+		
+		Predicate<Integer> isEven=i->i%2==0;
+		System.out.println("===="+isEven.test(4)+"======"+isEven.negate().test(5));
+	}
+}

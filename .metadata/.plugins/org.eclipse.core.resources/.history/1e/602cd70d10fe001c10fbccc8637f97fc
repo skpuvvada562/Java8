@@ -1,0 +1,9 @@
+package com.java8.features;
+
+public class Supplier8Java {
+//Supplier interface wont take any input but return an object
+	public static void main(String[] args) {
+
+	}
+
+}

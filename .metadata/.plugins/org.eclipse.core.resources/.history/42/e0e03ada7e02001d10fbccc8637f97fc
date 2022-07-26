@@ -1,0 +1,22 @@
+package com.java8.features;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.BinaryOperator;
+
+public class ReduceStream8 {
+
+	public static void main(String[] args) {
+		List<String> list=Arrays.asList("Sandeep","Mamatha","Advaith","Xyz");
+		BinaryOperator<String> biOpe=(s1,s2)->{
+			if(s1.length()>s2.length()) {
+				return s1;
+			}else {
+				return s2;
+			}
+		};
+		String data=list.stream().reduce(biOpe).get();
+		System.out.println("=="+biOpe.apply("Sandeep", "Mamatha"));
+		System.out.println("=="+data);
+	}
+}

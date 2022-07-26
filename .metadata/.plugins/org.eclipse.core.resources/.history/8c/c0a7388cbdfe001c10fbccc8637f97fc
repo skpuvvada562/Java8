@@ -1,0 +1,19 @@
+package com.java8.features;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.UnaryOperator;
+
+import com.java8.pojo.Employee;
+
+public class UnaryOperator8java {
+
+	public static void main(String[] args) {
+		List<Employee> empList=Arrays.asList(
+				new Employee(2l,"Mamatha",30),
+				new Employee(1l,"Sandeep",34),
+				new Employee(3l,"Advaith",3),new Employee(4l,"Jitesh",10));
+		UnaryOperator<Employee> una=e->empList.get(0);
+		System.out.println(una.apply(new Employee(2l,"Mamatha",30)));
+	}
+}

@@ -1,0 +1,6 @@
+package com.java8.function;
+
+public interface FunctionalInterface {
+
+		public abstract void m1();
+}

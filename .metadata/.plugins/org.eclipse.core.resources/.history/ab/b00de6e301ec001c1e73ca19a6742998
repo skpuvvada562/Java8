@@ -1,0 +1,22 @@
+package com.java8.features;
+
+import java.util.function.Function;
+
+public class ArithmeticOperations {
+
+	public static Integer square(int i) {
+		return i*i;
+	}
+	public static void main(String[] args) {
+		
+		System.out.println("==before java 8=="+square(5));
+		
+		//In Java 8
+		
+		Function<Integer,Integer> mul=i->i*i;
+		Function<Integer,Integer> add=i->i+i;
+		System.out.println("===java 8 ===="+mul.apply(9));
+		System.out.println("===java 8 ===="+add.apply(9));
+		
+	}
+}

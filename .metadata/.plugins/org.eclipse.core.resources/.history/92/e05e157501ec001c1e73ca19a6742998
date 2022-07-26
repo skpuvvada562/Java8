@@ -1,0 +1,12 @@
+package com.java8.features;
+
+public class ArithmeticOperations {
+
+	public static Integer square(int i) {
+		return i*i;
+	}
+	public static void main(String[] args) {
+		
+		System.out.println(square(5));
+	}
+}

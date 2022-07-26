@@ -1,0 +1,40 @@
+package com.java8.features;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+
+import com.java8.pojo.Employee;
+
+public class Consumer8java {
+
+	public static void main(String[] args) {
+
+		//Consumer always take Input value and return void Ex: Consumer<T> --- void
+		
+		Consumer<String> c=s->System.out.println(s);
+		c.accept("Sandeep");
+		
+		Consumer<Employee> empCon=e->{
+			if("Sandeep".equals(e.getName())) {
+				e.setAge(55);
+				System.out.println(e);
+			}
+		};
+		empCon.accept(new Employee(1l,"Sandeep",30));
+		
+		List<Employee> empList=Arrays.asList(new Employee(1l,"Kiran",62),new Employee(1l,"Laxman",60),new Employee(1l,"Sai",58));
+		Predicate<Employee> empPre=e->e.getAge()>58;
+		Consumer<Employee> conEmp=e->{
+			System.out.println("==name=="+e.getName()+"===age=="+e.getAge());
+		};
+		for(Employee e :empList) {
+			
+			if(empPre.test(e)) {
+				conEmp.accept(e);
+			}
+		}
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.java8.features;
+
+public class LamdaExpression {
+
+	public void display() {
+		System.out.println("Hello");
+	}
+	public static void main(String[] args) {
+		LamdaExpression l=new LamdaExpression();
+		
+		l.display();
+	}
+
+}

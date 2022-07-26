@@ -1,0 +1,22 @@
+package com.java8.features;
+
+import java.util.function.Function;
+
+public class Function8Java {
+
+	//Using provided input perform some operation and return result
+	// Ex: provide i value return square of it i-> i*i
+	// s->s.length here providing string value and returning length
+	
+	public int square(int i) {
+		return i*i;
+	}
+	public static void main(String[] args) {
+		
+		Function8Java fu=new Function8Java();
+		System.out.println(fu.square(5));
+		
+		Function<Integer,Integer> f=i->i*i;
+		System.out.println("functional interface:::"+f.apply(5));
+	}
+}

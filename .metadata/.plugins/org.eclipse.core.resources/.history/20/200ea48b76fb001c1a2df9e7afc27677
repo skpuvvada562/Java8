@@ -1,0 +1,16 @@
+package com.java8.features;
+import com.java8.function.*;
+
+public class LamdaExpression {
+	
+	public static void main(String[] args) {
+		
+		Test t=()->System.out.println("Welcome home");
+		t.m1();
+		
+		Addition ad=(a,b)->a+b;
+		int value=ad.add(5, 2);
+		System.out.println("sum of two numbers ::"+value);
+	}
+
+}

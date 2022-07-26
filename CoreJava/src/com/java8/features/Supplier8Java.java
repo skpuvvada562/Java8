@@ -1,0 +1,20 @@
+package com.java8.features;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Supplier;
+
+import com.java8.pojo.Employee;
+
+public class Supplier8Java {
+//Supplier interface wont take any input but return an object
+	public static void main(String[] args) {
+
+		Supplier<Employee> sup=()->new Employee(1l,"Advaith",2);
+		//System.out.println(sup.get());
+		
+		Supplier<List<Employee>> sup1=()->Arrays.asList(new Employee(1l,"Advaith",2),new Employee(2l,"Mamatha",30),new Employee(3l,"Sandeep",35));
+		System.out.println(sup.get());
+	}
+
+}

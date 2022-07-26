@@ -1,0 +1,29 @@
+package com.java8.features;
+
+import java.util.function.IntPredicate;
+import java.util.function.Predicate;
+
+public class PrimitivePredicates8java {
+
+	public static void main(String[] args) {
+		int array[]= {0,5,10,15,20,25,30};
+		//We should not use this function as there is an performance issue for converting primitive types to wrapper and vice versa. It is doing autoboxing and unboxing
+		Predicate<Integer> pre=	i->i%2==0; 
+		for(int i=0;i<array.length;i++) {
+			if(pre.test(i))
+				System.out.println("Normal predicate==="+array[i]);
+		}
+		//To over come above functionality use IntPredicate
+		
+		IntPredicate ipre=i->i%2==0;
+		for(int i=0;i<array.length;i++) {
+			if(ipre.test(i))
+				System.out.println("int predicate=="+array[i]);
+		}
+		
+		// Primitive Predicate Types
+			//IntPredicate
+			//DoublePredicate
+			//LongPredicate
+	}
+}

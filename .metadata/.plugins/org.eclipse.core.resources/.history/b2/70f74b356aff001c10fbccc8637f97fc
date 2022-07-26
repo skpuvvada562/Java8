@@ -1,0 +1,31 @@
+package com.java8.features;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import com.java8.pojo.Employee;
+
+public class Stream8java {
+
+	public static void main(String[] args) {
+		//Java 1.8 streams applicable for collection object
+		//A group of object as a single entity is called collection
+		//if you want to process the objects from collection then go for Stream concept
+		//I/O Stream meant for representing data with respect to file I/O operations
+		
+		//Stream s=c.stream() here c is any type of collection like list,set etc..
+		//stream() method presents inside of collection interface as default method
+		//Stream is an interface present in java.util.stream package
+		
+		List<Integer> list=Arrays.asList(0,10,5,20,15,25,30);
+		
+		Stream s=list.stream();
+		System.out.println("it is stream interface=="+s);
+		List<Integer> list2=list.stream().map(i->i*i).collect(Collectors.toList());
+		System.out.println(list2);
+		
+		
+	}
+}

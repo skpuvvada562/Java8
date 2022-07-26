@@ -1,0 +1,20 @@
+package com.java8.features;
+
+import java.util.List;
+import java.util.function.Consumer;
+import java.util.stream.Collectors;
+
+public class StreamFilter8 {
+
+	public static void main(String[] args) {
+		//if we want to filter elements from the collection based on some boolean condition then we should go for filter concept
+		//we can configure filter by filter() method of stream interface
+		//public Stream filter(Predicate<T> t) argument is can be boolean valued function or -> expression (lambda)
+		//ex: c.stream().filter(i->i%2==0)
+		
+		List<Integer> filterList=list.stream().filter(i->i%2==0).collect(Collectors.toList());
+		Consumer<List> conList=l->System.out.println("even numbers==="+l);
+		conList.accept(filterList);
+		
+	}
+}

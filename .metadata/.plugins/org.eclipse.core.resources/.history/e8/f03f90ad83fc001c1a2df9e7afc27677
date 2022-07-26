@@ -1,0 +1,21 @@
+package com.java8.features;
+
+interface Left{
+	default void m1() {
+		System.out.println("I am in left interface default m1 method");
+	}
+}
+
+interface Right {
+	default void m1() {
+		System.out.println("I am in Right interface default m1 method");
+	}
+}
+public class Java8DefaultMethod implements Left,Right{
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

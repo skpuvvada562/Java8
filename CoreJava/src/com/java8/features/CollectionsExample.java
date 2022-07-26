@@ -1,0 +1,16 @@
+package com.java8.features;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class CollectionsExample {
+
+	public static void main(String[] args) {
+		List<Integer> list=Arrays.asList(20,10,30,5,25);
+		Collections.sort(list,(i1,i2)-> i1<i2?-1:i1>i2?1:0);
+		/*Comparator<Integer> c=(i1,i2)-> i1<i2?-1:i1>i2?1:0;
+		Collections.sort(list,c);*/
+		System.out.println("Sorted order:::"+list);
+	}
+}

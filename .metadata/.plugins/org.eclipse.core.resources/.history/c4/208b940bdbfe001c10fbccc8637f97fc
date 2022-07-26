@@ -1,0 +1,39 @@
+package com.java8.features;
+
+import java.util.function.BinaryOperator;
+import java.util.function.IntBinaryOperator;
+import java.util.function.UnaryOperator;
+
+import com.java8.pojo.Employee;
+
+public class UnaryOperator8java {
+
+	public static void main(String[] args) {
+		//UnaryOperator means if input and output of type is same then we should use in below example input and output is Employee
+		UnaryOperator<Employee> una=e-> {
+			if("Sandeep".equals(e.getName()))
+				return e;
+			else return null;
+		};
+		System.out.println(una.apply(new Employee(2l,"Sandeep",30)));
+		
+		//IntUnaryOperator if input and output is always int applyAsInt(int value)
+		//LongUnaryOperator if input and output is always long applyAsLong(long value)
+		//DoubleUnaryOperator if input and output is always double applyAsDouble(Double value)
+		//BinaryOperator applicable for 2 inputs type if both inputs are always same and return type should be same public T apply(T t, T t)
+		
+		BinaryOperator<Employee> biOpe=(e1,e2)->{
+			if(e1.getName().equals(e2.getName()))
+				return e1;
+			else return e2;
+		};
+		System.out.println(biOpe.apply(new Employee(2l,"Sandeep",30),new Employee(2l,"Advaith",30)));
+		
+		//IntBinaryOperator
+		//LongBinaryOperator
+		//DoubleBinaryOperator
+		
+		IntBinaryOperator iB=(i1,i2)->i1*i2;
+		System.out.println(iB.applyAsInt(4, 5));
+	}
+}

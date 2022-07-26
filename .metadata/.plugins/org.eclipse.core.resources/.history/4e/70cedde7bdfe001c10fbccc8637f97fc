@@ -1,0 +1,18 @@
+package com.java8.features;
+
+import java.util.function.UnaryOperator;
+
+import com.java8.pojo.Employee;
+
+public class UnaryOperator8java {
+
+	public static void main(String[] args) {
+		
+		UnaryOperator<Employee> una=e-> {
+			if("Sandeep".equals(e.getName()))
+				return e;
+			else return null;
+		};
+		System.out.println(una.apply(new Employee(2l,"Sandedep",30)));
+	}
+}

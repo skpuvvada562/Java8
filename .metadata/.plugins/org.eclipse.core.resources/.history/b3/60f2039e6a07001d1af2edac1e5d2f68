@@ -1,0 +1,37 @@
+package com.java8.pojo;
+
+import java.util.List;
+
+public class PlanComponent {
+
+	private int planCompId;
+	private List<ProductComponent> pcList;
+	
+	public PlanComponent(int planCompId, List<ProductComponent> pcList) {
+		super();
+		this.planCompId = planCompId;
+		this.pcList = pcList;
+	}
+
+	public int getPlanCompId() {
+		return planCompId;
+	}
+
+	public void setPlanCompId(int planCompId) {
+		this.planCompId = planCompId;
+	}
+
+	public List<ProductComponent> getPcList() {
+		return pcList;
+	}
+
+	public void setPcList(List<ProductComponent> pcList) {
+		this.pcList = pcList;
+	}
+
+	@Override
+	public String toString() {
+		return "PlanComponent [planCompId=" + planCompId + ", pcList=" + pcList + "]";
+	}
+	
+}

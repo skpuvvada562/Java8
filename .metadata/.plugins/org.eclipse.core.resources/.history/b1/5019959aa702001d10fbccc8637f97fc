@@ -1,0 +1,27 @@
+package com.java8.features;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Stream;
+
+public class ForEach8java {
+
+	public static void main(String[] args) {
+
+		List<String> list=Arrays.asList("Sandy","Mammu","Advaith","Xyz","AdvaithRam");
+		list.stream().forEach(s->System.out.println(s.toUpperCase()));
+		
+		String arr[]=list.stream().toArray(String[] :: new);
+		for(String s:arr) {
+			System.out.println("to array==="+s);
+		}
+		
+		Stream<Integer> values=Stream.of(9,2,10,3,4);
+		values.forEach(System.out::println);
+		Optional<Integer> minValue=values.min((s1,s2)->s1.compareTo(s2));
+		if(minValue.isPresent())
+			System.out.println(minValue.get());
+	}
+
+}

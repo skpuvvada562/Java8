@@ -1,0 +1,13 @@
+package com.java8.features;
+
+interface Test{
+	public static void m1() {
+		System.out.println("I am in static interface m1 method...");
+	}
+}
+public class Java8StaticMethods {
+
+	public static void main(String[] args) {
+		Test.m1();
+	}
+}

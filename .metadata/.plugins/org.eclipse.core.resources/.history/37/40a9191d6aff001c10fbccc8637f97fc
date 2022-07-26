@@ -1,0 +1,8 @@
+package com.java8.features;
+
+public class StreamMap8java {
+
+	public static void main(String[] args) {
+		//Mapping -> if we want to create a separate new object for every object present in the collection based on some function then we should go for mapping
+	}
+}

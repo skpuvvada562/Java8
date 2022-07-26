@@ -1,0 +1,15 @@
+package com.java8.features;
+
+import java.util.function.Predicate;
+
+public class PrimitivePredicates {
+
+	public static void main(String[] args) {
+		int array[]= {0,5,10,15,20,25,30};
+		Predicate<Integer> pre=	i->i%2==0;
+		for(int i=0;i<array.length;i++) {
+			if(pre.test(i))
+				System.out.println(i);
+		}
+	}
+}
